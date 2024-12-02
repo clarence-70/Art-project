@@ -67,22 +67,7 @@ footer {
 }  .icon a{
     text-decoration: none;
     color: #007BFF;
-} 
-.icon ion-icon{
-    color: #007BFF;
-    font-size: 40px;
-    padding-left: 15px;
-    padding-top: 10px;
-
-
 }
-.c-iconc ion-icon {
-    color:white;
-    font-size: 30px;
-    padding-left: 15px;
-    padding-top: 10px;
-}
-
 
  .Skills-list {
     display: flex;
