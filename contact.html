@@ -1,0 +1,118 @@
+<!DOCTYPE html>  
+<html lang="en">  
+<head>  
+    <meta charset="UTF-8">  
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">  
+    <title>Contact</title>  
+    <link rel="stylesheet" href="styles.css">  
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.1/css/all.min.css"
+     integrity="sha512-5Hs3dF2AEPkpNAR7UiOHba+lRSJNeM2ECkwxUIxC1Q/FLycGTbNapWXB4tP889k5T5Ju8fs4b1P5z/iB4nMfSQ==" crossorigin="anonymous" referrerpolicy="no-referrer" /> 
+
+</head>  
+<body>  
+
+<header>  
+    <h1>Contact Me</h1>  
+    <nav>  
+        <ul>  
+            <li><a href="index.html">Home</a></li>  
+            <li><a href="about.html">About Me</a></li>  
+            <li><a href="contact.html">Contact</a></li>  
+        </ul>  
+    </nav>  
+</header>  
+
+<main>  
+    <section>  
+        <section>  
+            <h2>Contact Information</h2>  
+            <p><strong>Address:</strong> Mount Barclay , Monrovia, Liberia</p>  
+            <p><strong>Email:</strong> jclarencejrdiah@gmail.com </p>  
+            <p><strong>Phone:</strong> o779045270/ 0888759393</p>  
+            
+            <h2>Follow Me</h2>  
+            <div class="social-media">  
+                <a href="https://facebook.com/yourprofile" target="_blank" aria-label="Facebook">  
+                    <i class="fab fa-facebook-square"></i>  
+                </a>  
+                <a href="https://twitter.com/yourprofile" target="_blank" aria-label="Twitter">  
+                    <i class="fab fa-twitter-square"></i>  
+                </a>  
+                <a href="https://linkedin.com/in/yourprofile" target="_blank" aria-label="LinkedIn">  
+                    <i class="fab fa-linkedin"></i>  
+                </a>  
+                <a href="https://instagram.com/yourprofile" target="_blank" aria-label="Instagram">  
+                    <i class="fab fa-instagram-square"></i>  
+                </a>  
+                <a href="https://github.com/yourprofile" target="_blank" aria-label="GitHub">  
+                    <i class="fab fa-github-square"></i>  
+                </a>  
+            </div> 
+        <h2>Get in Touch</h2>  
+        <form id="contactForm">  
+            <label for="name">Name:</label>  
+            <input type="text" id="name" required>  
+
+            <label for="email">Email:</label>  
+            <input type="email" id="email" required>  
+
+            <label for="message">Message:</label>  
+            <textarea id="message" rows="4" required></textarea>  
+
+            <button type="submit">Submit</button>  
+        </form>  
+    </section>  
+    
+    <!-- Confirmation Modal -->  
+    <div id="confirmModal" class="modal">  
+        <div class="modal-content">  
+            <span class="close">&times;</span>  
+            <p>Are you sure you want to submit this form?</p>  
+            <button id="confirm">Yes</button>  
+            <button id="cancel">No</button>  
+        </div>  
+    </div>  
+</main>  
+
+<footer>  
+    <div class="icons">
+        <i class="fa-brands fa-whatsapp"></i>
+        <i class="fa-brands fa-github"></i>
+        <i class="fa-brands fa-linkedin"></i>
+        <i class="fa-brands fa-facebook"></i>
+        <i class="fa-brands fa-facebook-messenger"></i>
+    </div>
+    <p>&copy; 2024  Carence J. Diah, Jr </p>  
+</footer>  
+
+<script>
+    // Get modal elements  
+const confirmModal = document.getElementById('confirmModal');  
+const contactForm = document.getElementById('contactForm');  
+const closeConfirm = confirmModal.querySelector('.close');  
+
+// Show modal on form submit  
+contactForm.onsubmit = function(event) {  
+    event.preventDefault(); // Prevent actual form submission  
+    confirmModal.style.display = "block"; // Display modal  
+}  
+
+// Close the modal  
+closeConfirm.onclick = function() {  
+    confirmModal.style.display = "none"; // Hide modal  
+}  
+
+// Confirm submission  
+document.getElementById('confirm').onclick = function() {  
+    confirmModal.style.display = "none"; // Hide modal  
+    alert('Form submitted!'); // Replace this with your form submission logic (e.g., AJAX call or form action)  
+}  
+
+// Cancel submission  
+document.getElementById('cancel').onclick = function() {  
+    confirmModal.style.display = "none"; // Hide modal  
+}
+</script>  
+
+</body>  
+</html>
